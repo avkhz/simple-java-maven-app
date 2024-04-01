@@ -34,7 +34,10 @@ jobs:
         
     - name: docker tag
       run: docker tag javaproject:latest avkh12345/github:latest
-
+      
+    - name: tag version
+      run: docker tag javaproject:latest avkh12345/github:$MAJOR_NUM.$MINOR_NUM.$PATCH_NUM 
+      
     - name: push latest
       run: docker push avkh12345/github:latest
 
