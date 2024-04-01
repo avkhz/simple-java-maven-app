@@ -1,6 +1,7 @@
 # creating security group
 resource "aws_security_group" "terra" {
   name        = "terra"
+  vpc_id      = aws_vpc.main.id
   description = "New security group made by terraform"
   ingress {
       description = "SSH"
