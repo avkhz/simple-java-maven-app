@@ -6,7 +6,7 @@ resource "aws_instance" "example_server" {
   subnet_id              = aws_subnet.public.id
 
   tags = {
-    Name = var.instance_name
+    Name = "avihu"
   }
 
   user_data = file("install_docker.sh")
