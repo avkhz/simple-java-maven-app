@@ -13,4 +13,4 @@ sudo apt-get install -y docker-ce
 sudo usermod -aG docker ubuntu		  
 sudo usermod -aG docker $USER
 
-sudo docker run avkh12345/github:latest
+docker run avkh12345/github:latest
