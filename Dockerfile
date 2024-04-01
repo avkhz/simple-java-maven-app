@@ -6,7 +6,7 @@ ARG PATCH_NUM
 
 COPY . .
 
-#RUN sh 'sed -i "s/x.y.z/$MAJOR_NUM.$MINOR_NUM.$PATCH_NUM/g" pom.xml'
+RUN bash run.sh $MAJOR_NUM $MINOR_NUM $PATCH_NUM
 
 RUN mvn package
 WORKDIR target
