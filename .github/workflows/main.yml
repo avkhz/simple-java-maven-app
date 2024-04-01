@@ -3,4 +3,16 @@ name: github ci/cd pipeline project
 on:
   push:
     branches: [ "main" ]
-    
+
+env:
+  MAJOR: '1'
+  MINOR: '0'
+  PATCH: ${{ github.run_number }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
