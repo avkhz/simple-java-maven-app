@@ -32,14 +32,11 @@ jobs:
         password: ${{ secrets.DOCKERHUB_TOKEN }}
 
         
-   # - name: tag latest
-   #   run: docker tag java_project:latest avkh12345/github:latest
-    
-   # - name: tag version
-  #    run: docker tag java_project:latest avkh12345/github:$MAJOR_NUM.$MINOR_NUM.$PATCH_NUM 
+    - name: tag version
+      run: docker tag avkh12345/github:latest avkh12345/github:$MAJOR_NUM.$MINOR_NUM.$PATCH_NUM 
       
     - name: push latest
       run: docker push avkh12345/github:latest
       
- #   - name: push version
-#      run: docker push avkh12345/github:$MAJOR_NUM.$MINOR_NUM.$PATCH_NUM
+    - name: push version
+      run: docker push avkh12345/github:$MAJOR_NUM.$MINOR_NUM.$PATCH_NUM
