@@ -2,7 +2,7 @@ name: github ci/cd pipeline project
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "master" ]
 
 env:
   MAJOR: '1'
@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
          
     steps:
- # - uses: actions/checkout@v3
+    - uses: actions/checkout@v3
     
     - name: check files
       run: ls -la
