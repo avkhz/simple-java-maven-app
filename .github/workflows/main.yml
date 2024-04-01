@@ -9,4 +9,6 @@ env:
   MINOR: '0'
   PATCH: ${{ github.run_number }}
 
-
+jobs:
+  build:
+    runs-on: ubuntu-latest
