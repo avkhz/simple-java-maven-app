@@ -1,0 +1,6 @@
+name: github ci/cd pipeline project
+
+on:
+  push:
+    branches: [ "main" ]
+    
