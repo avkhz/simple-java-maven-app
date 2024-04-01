@@ -3,7 +3,9 @@ FROM maven:3.8.6-jdk-11 as base
 ARG MAJOR_NUM
 ARG MINOR_NUM
 ARG PATCH_NUM
-
+ENV MAJOR_NUM=$MAJOR_NUM
+ENV MINOR_NUM=$MINOR_NUM
+ENV PATCH_NUM=$PATCH_NUM
 COPY . .
 
 RUN bash run.sh $MAJOR_NUM $MINOR_NUM $PATCH_NUM
@@ -20,4 +22,4 @@ ARG PATCH_NUM
 
 COPY --from=base /target/my-app-$MAJOR_NUM.$MINOR_NUM.$PATCH_NUM.jar .
 
-CMD java -jar *.jar
+CMD java -jar my-app-$MAJOR_NUM.$MINOR_NUM.$PATCH_NUM.jar
