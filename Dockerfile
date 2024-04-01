@@ -9,7 +9,7 @@ COPY . .
 #RUN sh 'sed -i "s/x.y.z/$MAJOR_NUM.$MINOR_NUM.$PATCH_NUM/g" pom.xml'
 
 RUN mvn package
-
+WORKDIR target
 RUN ls
 
 FROM openjdk:17-jdk-slim
