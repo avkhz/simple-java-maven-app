@@ -9,14 +9,4 @@ env:
   MINOR: '0'
   PATCH: ${{ github.run_number }}
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
 
-    steps:
-    - uses: actions/checkout@v3
-      with:
-        persist-credentials: false
-
-    - name: print
-      run: sh 'echo "hello"'
