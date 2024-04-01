@@ -20,7 +20,7 @@ jobs:
       run: ls -la
 
     - name: Build the Docker image
-      run: docker build --build-arg PATCH_NUM=$PATCH --build-arg MAJOR_NUM=$MAJOR --build-arg MINOR_NUM=$MINOR -t barminz/dependabot:latest .
+      run: docker build --build-arg PATCH_NUM=$PATCH --build-arg MAJOR_NUM=$MAJOR --build-arg MINOR_NUM=$MINOR -t avkhz/dependabot:latest .
       
     - name: show_image
       run: docker images
