@@ -20,7 +20,7 @@ jobs:
       run: ls -la
 
     - name: Build the Docker image
-      run: docker build --build-arg PATCH_NUM=$PATCH --build-arg MAJOR_NUM=$MAJOR --build-arg MINOR_NUM=$MINOR -t avkh12345/github/java_project:latest .
+      run: docker build --build-arg PATCH_NUM=$PATCH --build-arg MAJOR_NUM=$MAJOR --build-arg MINOR_NUM=$MINOR -t avkh12345/github:latest .
       
     - name: show_image
       run: docker images
@@ -39,7 +39,7 @@ jobs:
   #    run: docker tag java_project:latest avkh12345/github:$MAJOR_NUM.$MINOR_NUM.$PATCH_NUM 
       
     - name: push latest
-      run: docker push avkh12345/github/javaproject:latest
+      run: docker push avkh12345/github:latest
       
  #   - name: push version
 #      run: docker push avkh12345/github:$MAJOR_NUM.$MINOR_NUM.$PATCH_NUM
